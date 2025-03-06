@@ -17,22 +17,35 @@ Technologies used:
 Programming Language: Python
 
 Frameworks & Libraries
+
     FastAPI – Web framework for building APIs.
+    
     Uvicorn – ASGI server for running FastAPI.
+    
     Requests – Fetching data from public APIs.
+    
     JSON – Data storage and manipulation.
+    
     Datetime – Handling timestamps.
+    
     UUID – Generating unique identifiers.
+
     Collections (defaultdict) – Optimizing data processing.
 
 Data Storage & Processing
+
     JSON Files – Storing transformed data.
+    
     Dictionary Lookups – Fast data retrieval.
 
 Development & Deployment
+
     Virtual Environment – Isolated Python environment.
+    
     Git & GitHub – Version control and code management.
+    
     Swagger UI (FastAPI Docs) – API documentation and testing.
+    
 
 Steps followed to Implement the Solution
 
