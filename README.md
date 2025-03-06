@@ -52,62 +52,85 @@ Steps followed to Implement the Solution
 Step 1: Setup the Project
 
 Create a project structure:
+
     data_pipeline/
+    
     ├── main.py  
+    
     ├── fetch_data.py
+    
     ├── transform.py
+    
     ├── insights.py
+    
     ├── requirements.txt
+    
     ├── README.md
+    
     ├── business_rules.py
+    
 
 Follwoing links were used:
+
     PRODUCTS_API = "https://fakestoreapi.com/products"
+    
     USERS_API = "https://randomuser.me/api/?results=20"
+    
     TRANSACTIONS_API = "https://my.api.mockaroo.com/orders.json?key=e49e6840"
 
 create a virtual environment :
+
     python -m venv venv
+    
     venv\Scripts\activate     # For Windows
 
 installing dependencies
+
     writing required libraries on requirements.txt
+    
     pip install -r requirements.txt
 
 
 Step 2 : Write the entire logic in different files 
 
 Step 1: Data Fetching (fetch_data.py)
+
     Functions:
         fetch_products
         fetch_users
         fetch_transactions
         fetch_data
+        
     Used functions to fetch products, users, and transactions from different functions.
     Implemented error handling to ensure API failures don’t break the pipeline.
 
 Step 2: Data Transformation (transform.py)
+
     Functions:
         generate_unique_id
         transform_product
         transform_user
         transform_transaction
         transform_data
+        
     Standardized data into a structured format using transform.py.
     UUIDs were generated for each record to ensure uniqueness.
     Handled missing fields to avoid KeyErrors.
 
 Step 3: Data Enrichment & Business Logic (business_rules.py)
+
     Functions:
         join_transactions_with_products
         join_transactions_with_users
         calculate_user_spending
         most_popular_categories
         average_transaction_value
+        
     Transactions were linked with users and products for richer insights.
     User spending, popular categories, and revenue calculations were implemented.
 
 Step 4: Data Insights (insights.py)
+
 Functions:
     total_transactions_per_user
     user_with_most_transactions
@@ -117,9 +140,11 @@ Functions:
     category_wise_revenue
     top_revenue_categories
     most_rated_products
+    
 insights.py processes data to generate insights on user transactions and product performance, including spending patterns, top-selling products, revenue calculations, and category popularity for better analytics.
 
 Step 5: API Development (main.py)
+
     Firstly imported all the libraries and functions.
     Initialised FastApi App
     Implemented  Fetching and transforming data
@@ -128,7 +153,9 @@ Step 5: API Development (main.py)
     Saved all the data in JSON for better understanding
 
  GET /data/{entity_type} 
- - Retrieve processed data  by type 
+ 
+ - Retrieve processed data  by type
+   
  - RESPONSE :
             [
                 {
@@ -152,7 +179,9 @@ Step 5: API Development (main.py)
                 }
 
  GET /insights/users 
- - User spending patterns and statistics 
+ 
+ - User spending patterns and statistics
+   
  - RESPONSE :
        
             {
@@ -199,7 +228,9 @@ Step 5: API Development (main.py)
             } 
 
  GET /insights/products 
+ 
  - Product popularity metrics
+   
  - RESPONSE :
             {
             "most popular category": [
@@ -403,12 +434,18 @@ Optimized dictionary lookups for faster processing.
 
 
 Step 3 : running the application to test
+
     in the terminal put this command to run
+    
     -uvicorn main:app --reload
 
 
 Future Improvements :
+
     Database Integration
+    
     UI Dashboard
+    
     Authentication & Authorization 
+    
     Artficial Intelligent system
