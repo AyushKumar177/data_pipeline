@@ -1,4 +1,4 @@
-Brief summary of how I approached the problem:-
+#Brief summary of how I approached the problem:-
     Data Fetching – Collected data from three public APIs (products, users, transactions) with error handling.
     Data Transformation – Standardized and normalised data and metadata while handling  fields.
     Data Enrichment – Joined transactions with products and users, calculated user spending, popular categories, and revenue.
