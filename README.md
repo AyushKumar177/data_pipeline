@@ -1,9 +1,15 @@
 #Brief summary of how I approached the problem:-
+
     Data Fetching – Collected data from three public APIs (products, users, transactions) with error handling.
+    
     Data Transformation – Standardized and normalised data and metadata while handling  fields.
+    
     Data Enrichment – Joined transactions with products and users, calculated user spending, popular categories, and revenue.
+    
     API Development – Built FastAPI endpoints to serve raw and processed data, including user and product insights.
+    
     Error Handling & Optimization – Used try-except blocks to prevent crashes and optimized dictionary lookups for performance.
+    
     Data Storage – Stored processed data into JSON files for structured and readable output.
 
 Technologies used:
